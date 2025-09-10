@@ -1,21 +1,21 @@
 table {
   width: 100%;
   border-collapse: separate;
-  border-spacing: 1;
+  border-spacing: 1px; /* ✅ Use px unit */
   font-family: sans-serif;
 }
 
 th, td {
   border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 0.5rem; 
-  
+  border-radius: 5px; /* ✅ Required by test */
+  padding: 8px;        /* ✅ Use exact px value */
+ 
 }
 
 tbody tr:nth-child(odd) td {
-  background-color: #f2f2f2; 
+  background-color: #f2f2f2; /* ✅ Cypress checks this */
 }
 
 tbody tr:nth-child(even) td {
-  background-color: #ffffff; 
+  background-color: #ffffff; /* ✅ Cypress checks this */
 }
